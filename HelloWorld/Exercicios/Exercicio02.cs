@@ -1,14 +1,24 @@
-﻿namespace HelloWorld.Exercicios;
+﻿using HelloWorld.Helpers;
+using HelloWorld.Models;
+
+namespace HelloWorld.Exercicios;
 
 class Exercicio02
 {
     public static void Run()
     {
-        int[] numeros = new int[] { 2, 4, 6, 8 };
+        string nome = ConsoleExtensions.ReadLine("Digite seu Nome: ");
+        
+        int idade = int.Parse(ConsoleExtensions.ReadLine("Digite sua Idade: "));
 
-        for(int i = 0; i < numeros.Length; i++)
-        {
-            Console.WriteLine(numeros[i]);
-        }   
+        string endereco = ConsoleExtensions.ReadLine("Digite seu Endereço: ");
+
+        int matricula = int.Parse(ConsoleExtensions.ReadLine("Digite o número da Matricula: "));
+
+        Aluno aluno = new Aluno(nome, idade, endereco, matricula); 
+
+            
+        
+        Console.WriteLine($"\n{aluno.Nome}\n{aluno.Idade}\n{aluno.Endereco}\n{aluno.Matricula}");
     }
 }

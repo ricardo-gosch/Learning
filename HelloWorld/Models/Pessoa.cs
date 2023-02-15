@@ -6,11 +6,14 @@
         public int Idade { get; private set; }
         public string Endereco { get; private set; }
 
-        public Pessoa(string nome, int idade, string endereco)
+        public Pessoa(string nome, int idade)
         {
             Nome = nome;
             Idade = idade;
-            Endereco = endereco;
+        }
+        public Pessoa(string nome, int idade, string endereco) : this (nome, idade)
+        {
+            this.Endereco = endereco;
         }
 
         public void DefinirNome(string nome)
