@@ -7,7 +7,7 @@ public class Program
 {
     public static void Main()
     {
-        Exercicio01.Run();
+        Exercicio04.Run();
 
     }
 }
